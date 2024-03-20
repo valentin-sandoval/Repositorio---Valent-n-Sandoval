@@ -16,8 +16,15 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+from django.http import HttpResponse
+
+def mi_func(xx):
+    return HttpResponse("<h1>Bienvenidos a mi Proyecto</h1>")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", mi_func),
+    path("aplicacion/", include("aplicacion.urls")),
 ]
