@@ -25,4 +25,4 @@ def create_view(request, nombre_de_usuario, destino):
     # reserva = Reserva("", nombre_de_usuario, destino)
     reserva = Reserva.objects.create(nombre_de_usuario=nombre_de_usuario, destino=destino)
 
-    return HttpResponse(f"resultado: {reserva}")
+    return HttpResponse(f"Resultado: {reserva}")
