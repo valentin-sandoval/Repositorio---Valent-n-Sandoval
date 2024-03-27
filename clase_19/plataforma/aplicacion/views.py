@@ -4,6 +4,8 @@ from .models import Reserva
 
 def home_view(request):
     return render(request, "aplicacion/home.html")
+
+
 def list_view(request):
     reservas = Reserva.objects.all()
     contexto_dict = {'reservas': reservas}
